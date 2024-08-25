@@ -1,15 +1,38 @@
 ---
 layout: default
-title: 
+title: Your Page Title
 seo:
-  title: 
-  description: 
+  title: Your SEO Title
+  description: Your SEO Description
   keywords:
-    - 
+    - keyword1
+    - keyword2
   social_image: 
   hide-from-google: true
 header:
- - image:
-   position: 
-   label: 
+  image: /images/temp-img.jpg
 ---
+
+<!-- Header -->
+<header class="flex justify-center items-center px-5p py-2p bg-gray-light shadow-md fixed w-full top-0 z-50">
+  <div class="flex-grow">
+    <a href="/" class="text-xl font-bold">
+      <h2 class="logo">LOGO</h2>
+    </a>
+  </div>
+  <nav class="flex-grow text-right space-x-4">
+    <a href="#" class="text-gray-700">Link</a>
+    <a href="#" class="text-gray-700">Link</a>
+    <a href="#" class="text-gray-700">Link</a>
+    <a href="#" class="emphasis-button bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Call to Action</a>
+  </nav>
+</header>
+
+<section class="flex items-center justify-start h-screen bg-cover bg-no-repeat relative" style="background-image: linear-gradient(to right, rgba(21, 19, 18, 0.12), rgba(66, 53, 47, 0)), url('/images/temp-img.jpg'); background-position: center;">
+  <img class="-z-10 absolute inset-0 w-full h-full object-cover object-center" src="/images/temp-img.jpg" alt="Background Image">
+  <div class="p-5p">
+    <h2 class="font-bold text-4xl text-white">This is a heading</h2>
+    <p class="text-lg text-gray-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+    <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Sign me up!</a>
+  </div>
+</section>
