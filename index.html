@@ -9,15 +9,19 @@ seo:
     - keyword2
   social_image: 
   hide-from-google: true
+logo:
+  image: /images/rise-and-grind-logo-optimized.png
+  alt:
 header:
-  image: /images/temp-img.jpg
+  image: /images/cafe-banner-image.png
+  alt:
 ---
 
 <!-- Header -->
 <header class="flex justify-center items-center px-5p py-2p bg-gray-light shadow-md fixed w-full top-0 z-50">
   <div class="flex-grow">
-    <a href="/" class="text-xl font-bold">
-      <h2 class="logo">LOGO</h2>
+    <a href="/index.html" class="w-44 sm:w-52 inline-block" aria-label="Link to the index page">
+      <img src="{{ logo.image }}" alt="{{ logo.alt }}">
     </a>
   </div>
   <nav class="flex-grow text-right space-x-4">
@@ -28,8 +32,8 @@ header:
   </nav>
 </header>
 
-<section class="flex items-center justify-start h-screen bg-cover bg-no-repeat relative" style="background-image: linear-gradient(to right, rgba(21, 19, 18, 0.12), rgba(66, 53, 47, 0)), url('/images/temp-img.jpg'); background-position: center;">
-  <img class="-z-10 absolute inset-0 w-full h-full object-cover object-center" src="/images/temp-img.jpg" alt="Background Image">
+<section class="flex items-center justify-start h-screen bg-cover bg-no-repeat relative" style="background-image: linear-gradient(to right, rgba(21, 19, 18, 0.12), rgba(66, 53, 47, 0)), url({{ header.image }}); background-position: center;">
+  <img class="-z-10 absolute inset-0 w-full h-full object-cover object-center" src="{{ header.image }}" alt="{{ header.alt }}">
   <div class="p-5p">
     <h2 class="font-bold text-4xl text-white">This is a heading</h2>
     <p class="text-lg text-gray-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
