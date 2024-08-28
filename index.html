@@ -14,29 +14,29 @@ logo:
   alt:
 header:
   image: /images/cafe-banner-image.png
-  alt:
+  label:
+  position: 50% 50%
+  title: Rise and Grind
+  sub-title: lorem ipsum
+  cta: lorem ipsum
+  cta-url:
+  cta-label:
 ---
 
-<!-- Header -->
-<header class="flex justify-center items-center px-5p py-2p bg-gray-light shadow-md fixed w-full top-0 z-50">
-  <div class="flex-grow">
-    <a href="/index.html" class="w-44 sm:w-52 inline-block" aria-label="Link to the index page">
-      <img src="{{ logo.image }}" alt="{{ logo.alt }}">
-    </a>
-  </div>
-  <nav class="flex-grow text-right space-x-4">
-    <a href="#" class="text-gray-700">Link</a>
-    <a href="#" class="text-gray-700">Link</a>
-    <a href="#" class="text-gray-700">Link</a>
-    <a href="#" class="emphasis-button bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Call to Action</a>
-  </nav>
-</header>
+<!----------------HEADER---------------------->
 
-<section class="flex items-center justify-start h-screen bg-cover bg-no-repeat relative" style="background-image: linear-gradient(to right, rgba(21, 19, 18, 0.12), rgba(66, 53, 47, 0)), url({{ header.image }}); background-position: center;">
-  <img class="-z-10 absolute inset-0 w-full h-full object-cover object-center" src="{{ header.image }}" alt="{{ header.alt }}">
-  <div class="p-5p">
-    <h2 class="font-bold text-4xl text-white">This is a heading</h2>
-    <p class="text-lg text-gray-300">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-    <a href="#" class="bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600">Sign me up!</a>
-  </div>
+<section class="max-w-screen-2xl mx-auto">
+  {% for item in page.header %}
+  <div class="bg-cover bg-no-repeat object-cover h-screen relative" style="background-image: linear-gradient(to right, rgba(21, 19, 18, 0.99), rgba(66, 53, 47, 0.37)), url('{{ item.image }}'); background-position: {{ item.position }};">
+     <img class="-z-10 absolute inset-0 w-full h-full object-cover object-center" src="{{ item.image }}" alt="{{ item.label }}">
+        <div class="flex flex-col h-full justify-end px-2p">
+           <p class="header-title editable">{{ item.title }}</p>
+           <h2 class="big-title pb-5p sm:pr-5p md:pr-40p lg:pr-0 editable">{{ item.sub-title }}</h2>
+           <div class="mt-5p mb-5p">
+              <a href="{{ item.cta-url }}" class="button-header mr-5p" target="_blank" rel="noopener noreferrer" aria-label="{{ item.cta-label }}">{{ item.cta }}</a>
+           </div>
+        </div>
+     </div>
+  {% endfor %}
 </section>
+
